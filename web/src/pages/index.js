@@ -64,8 +64,7 @@ export const query = graphql`
   }
 `
 
-const IndexPage = props => {
-  const {data, errors} = props
+const IndexPage = ({data, errors}) => {
 
   if (errors) {
     return (
