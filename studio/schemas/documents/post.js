@@ -50,6 +50,16 @@ export default {
       ]
     },
     {
+      name: 'Matrixs',
+      title: 'Matrix Field',
+      type: 'array',
+      of: [
+        {
+          type: 'matrixReference'
+        }
+      ]
+    },
+    {
       name: 'categories',
       type: 'array',
       title: 'Categories',
