@@ -12,7 +12,7 @@ export default {
       name: 'content',
       type: 'array',
       title: 'Moduler',
-      of: [{type: 'titleTextReference', name: 'Title and Text'}, {type: 'author'}]
+      of: [{type: 'titleTextReference'}, {type: 'author'}]
     }
   ],
   preview: {

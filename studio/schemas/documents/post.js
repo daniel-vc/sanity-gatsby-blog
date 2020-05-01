@@ -50,6 +50,11 @@ export default {
       ]
     },
     {
+      name: 'BlogPosts',
+      title: 'Blog posts',
+      type: 'BlogPosts'
+    },
+    {
       name: 'Matrixs',
       title: 'Matrix Field',
       type: 'array',

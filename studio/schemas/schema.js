@@ -16,8 +16,9 @@ import bioPortableText from './objects/bioPortableText'
 import excerptPortableText from './objects/excerptPortableText'
 import mainImage from './objects/mainImage'
 import authorReference from './objects/authorReference'
+import titleTextReference from './objects/titleTextReference'
 import matrixReference from './objects/matrixReference'
-import matrixTitleTextReference from './objects/matrixTitleTextReference'
+import BlogPosts from './objects/blogPosts'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -29,13 +30,14 @@ export default createSchema({
     // The following are document types which will appear
     // in the studio.
     siteSettings,
+    titleTextReference,
+    matrixReference,
+    BlogPosts,
     post,
     category,
     author,
     mainImage,
     authorReference,
-    matrixReference,
-    matrixTitleTextReference,
     bodyPortableText,
     bioPortableText,
     excerptPortableText
