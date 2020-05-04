@@ -10,6 +10,7 @@ import Container from '../components/container'
 import GraphQLErrorList from '../components/graphql-error-list'
 import SEO from '../components/seo'
 import Layout from '../containers/layout'
+import localize from '../components/localize'
 
 export const query = graphql`
   fragment SanityImage on SanityMainImage {
@@ -31,6 +32,7 @@ export const query = graphql`
     }
     asset {
       _id
+      _type
     }
   }
 
@@ -49,14 +51,25 @@ export const query = graphql`
         node {
           id
           publishedAt
-          mainImage {
-            ...SanityImage
-            alt
-          }
+          # mainImage {
+          #   ...SanityImage
+          #   alt
+          #   _type
+          # }
           title
           _rawExcerpt
           slug {
             current
+          }
+          titleLocale {
+            _type
+            en
+            es
+          }
+          descriptionLocale {
+            _type
+            en
+            es
           }
         }
       }
@@ -64,7 +77,8 @@ export const query = graphql`
   }
 `
 
-const IndexPage = ({data, errors}) => {
+const IndexPage = props => {
+  const {data, errors} = props;
 
   if (errors) {
     return (
@@ -80,6 +94,8 @@ const IndexPage = ({data, errors}) => {
       .filter(filterOutDocsWithoutSlugs)
       .filter(filterOutDocsPublishedInTheFuture)
     : []
+  // const postNodes = (data || {}).posts
+  //   ? mapEdgesToNodes(data.posts) : []
 
   if (!site) {
     throw new Error(
@@ -96,6 +112,7 @@ const IndexPage = ({data, errors}) => {
       />
       <Container>
         <h1 hidden>Welcome to {site.title}</h1>
+        <h2>Hi {props.pageContext.locale || process.env.GATSBY_LOCALE}</h2>
         {postNodes && (
           <BlogPostPreviewList
             title='Latest blog posts'
@@ -108,4 +125,5 @@ const IndexPage = ({data, errors}) => {
   )
 }
 
-export default IndexPage
+// export default IndexPage
+export default localize(IndexPage)

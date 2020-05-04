@@ -9,6 +9,7 @@ import styles from './blog-post-preview.module.css'
 import {responsiveTitle3} from './typography.module.css'
 
 function BlogPostPreview (props) {
+  // console.log(props.titleLocale, props.descriptionLocale)
   return (
     <Link
       className={props.isInList ? styles.inList : styles.inGrid}
@@ -28,6 +29,8 @@ function BlogPostPreview (props) {
       </div>
       <div className={styles.text}>
         <h3 className={cn(responsiveTitle3, styles.title)}>{props.title}</h3>
+        <h4>{}</h4>
+        <h5>{}</h5>
         {props._rawExcerpt && (
           <div className={styles.excerpt}>
             <PortableText blocks={props._rawExcerpt} />
