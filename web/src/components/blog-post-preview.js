@@ -9,7 +9,6 @@ import styles from './blog-post-preview.module.css'
 import {responsiveTitle3} from './typography.module.css'
 
 function BlogPostPreview (props) {
-  console.log(props.titleLocale, props.descriptionLocale)
   return (
     <Link
       className={props.isInList ? styles.inList : styles.inGrid}
