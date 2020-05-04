@@ -4,12 +4,12 @@ import { createLocaleTextGetter } from '../util';
 
 function localize(Component) {
   return class Localize extends React.Component {
-    // static propTypes = {
-    //   data: Proptypes.object,
-    //   pageContext: Proptypes.shape({
-    //     locale: Proptypes.string
-    //   }),
-    // }
+    static propTypes = {
+      data: Proptypes.object,
+      pageContext: Proptypes.shape({
+        locale: Proptypes.string
+      }),
+    }
     constructor(props) {
       super(props)
 

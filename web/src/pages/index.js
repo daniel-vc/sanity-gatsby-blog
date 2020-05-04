@@ -113,6 +113,7 @@ const IndexPage = props => {
       <Container>
         <h1 hidden>Welcome to {site.title}</h1>
         <h2>Hi {props.pageContext.locale || process.env.GATSBY_LOCALE}</h2>
+        Translation: { JSON.stringify(postNodes[0].titleLocale, null, 2) }
         {postNodes && (
           <BlogPostPreviewList
             title='Latest blog posts'
