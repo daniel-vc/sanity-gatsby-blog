@@ -8,6 +8,14 @@ import PortableText from './portableText'
 import styles from './blog-post-preview.module.css'
 import {responsiveTitle3} from './typography.module.css'
 
+
+// imagine a post with full english and spanish translations. 
+// Url for english may be /en/my-post url for spanish may be /es/mi-publicacion 
+// The slugs themselves would I suppose be generated from the post titles (again translated). 
+// And if on that page when you click the language switcher it takes you to the right url according 
+// to the language you selected.
+
+
 function BlogPostPreview (props) {
   return (
     <Link
