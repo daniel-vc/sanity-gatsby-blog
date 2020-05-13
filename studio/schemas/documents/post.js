@@ -22,6 +22,36 @@ export default {
       }
     },
     {
+      name: 'food',
+      type: 'string',
+      title: 'Your fave food?',
+      description: 'Enter your fave food?'
+    },
+    {
+      name: 'film',
+      type: 'string',
+      title: 'Your fave film',
+      description: 'Enter your fave film?'
+    },
+    {
+      name: 'sport',
+      type: 'string',
+      title: 'Your fave sport',
+      description: 'Enter your fave sport?'
+    },
+    {
+      name: 'age',
+      type: 'string',
+      title: 'Your Age',
+      description: 'Enter your age'
+    },
+    {
+      name: 'dob',
+      type: 'string',
+      title: 'Your Date of Birth',
+      description: 'Enter your Date of Birth'
+    },
+    {
       name: 'publishedAt',
       type: 'datetime',
       title: 'Published at',
