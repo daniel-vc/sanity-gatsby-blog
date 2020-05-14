@@ -22,34 +22,16 @@ export default {
       }
     },
     {
-      name: 'food',
-      type: 'string',
-      title: 'Your fave food?',
-      description: 'Enter your fave food?'
-    },
-    {
-      name: 'film',
-      type: 'string',
-      title: 'Your fave film',
-      description: 'Enter your fave film?'
-    },
-    {
-      name: 'sport',
-      type: 'string',
-      title: 'Your fave sport',
-      description: 'Enter your fave sport?'
-    },
-    {
       name: 'age',
-      type: 'string',
-      title: 'Your Age',
-      description: 'Enter your age'
+      type: 'boolean',
+      title: 'Older?',
+      description: 'Are you older than you think you are?'
     },
     {
       name: 'dob',
-      type: 'string',
+      type: 'boolean',
       title: 'Your Date of Birth',
-      description: 'Enter your Date of Birth'
+      description: 'Enter your Date of Birth?'
     },
     {
       name: 'publishedAt',
